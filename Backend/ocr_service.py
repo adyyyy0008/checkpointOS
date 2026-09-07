@@ -2,8 +2,9 @@ import re
 import requests
 from fastapi import HTTPException
 from pydantic import BaseModel
+import os
 
-OCR_SPACE_API_KEY = "K83274496588957"
+OCR_SPACE_API_KEY = os.getenv("OCR_SPACE_API_KEY")
 OCR_SPACE_URL = "https://api.ocr.space/parse/image"
 MAX_FILE_SIZE = 2 * 1024 * 1024
 
